@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -7,11 +8,19 @@ import joblib
 # --- 1. LOAD ASSETS ---
 # Removed @st.cache_resource to avoid further caching errors
 def load_assets():
-    # USAGE CHANGE: We use the native Booster instead of XGBClassifier
-    # This avoids the "estimator_type" error caused by version mismatches.
     model = xgb.Booster()
-    model.load_model("xgb_readmission_model.json")
-    feature_names = joblib.load("feature_names.pkl")
+    
+    # Get the absolute path of the directory where app.py is located
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    
+    # Construct the full paths to the files
+    model_path = os.path.join(current_dir, "xgb_readmission_model.json")
+    features_path = os.path.join(current_dir, "feature_names.pkl")
+    
+    # Load using the full paths
+    model.load_model(model_path)
+    feature_names = joblib.load(features_path)
+    
     return model, feature_names
 
 model, feature_names = load_assets()
