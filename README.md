@@ -56,7 +56,7 @@ The model was trained on the **UCI Diabetes 130-US Hospitals Dataset** (~70k cle
 **Top Predictors Found:**
 1.  **Prior Service Utilization** (History of visits)
 2.  **Discharge Location** (Sent to Skilled Nursing Facilities)
-3.  **Age Group** (Older patients >70)
+3.  **Age Group** (Older patients >70).
 
 ---
 
