@@ -88,6 +88,12 @@ readmission_shield/
 ├── feature_names.pkl      # Feature column mapping
 └── README.md              # Project Documentation
 ```
+
+## Streamlit Deployed App 
+```bash
+https://hospital-readmission-shield-diabetes-mxh3cfy4tg5movmukaphtm.streamlit.app/
+```
+
 ## 🤝 Future Improvements
 - **Hyperparameter Tuning:** Implement GridSearchCV or Optuna to optimize model parameters and improve AUC-ROC performance.
 - **Dockerization:** Containerize the application to enable consistent environments and simplify cloud deployment.
