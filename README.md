@@ -64,5 +64,36 @@ The model was trained on the **UCI Diabetes 130-US Hospitals Dataset** (~70k cle
 
 ### 1. Clone the Repository
 ```bash
-git clone [https://github.com/YOUR_USERNAME/readmission_shield.git](https://github.com/YOUR_USERNAME/readmission_shield.git)
+git clone [https://github.com/rrushikeshp69/readmission_shield.git](https://github.com/YOUR_USERNAME/readmission_shield.git)
 cd readmission_shield
+```
+### 2. Install the Dependencies
+```bash
+pip install pandas numpy xgboost scikit-learn streamlit joblib shap
+```
+### 3. Run the Dashboard
+```bash
+streamlit run app.py
+```
+
+## 📂 Project Structure
+```plaintext
+readmission_shield/
+│
+├── data/                  # Raw dataset (GitIgnored if large)
+├── notebooks/             # Jupyter Notebooks for EDA and Training
+├── src/                   # Python scripts for cleaning and engineering
+├── app.py                 # Streamlit Application (Frontend)
+├── xgb_readmission_model.json  # Trained Model Artifact
+├── feature_names.pkl      # Feature column mapping
+└── README.md              # Project Documentation
+```
+## 🤝 Future Improvements
+- **Hyperparameter Tuning:** Implement GridSearchCV or Optuna to optimize model parameters and improve AUC-ROC performance.
+- **Dockerization:** Containerize the application to enable consistent environments and simplify cloud deployment.
+- **API Development:** Expose the trained model via a FastAPI endpoint for seamless integration with Electronic Health Record (EHR) systems.
+
+**Author**
+**Rushikesh Panchal** Data Science Student | Software Testing Enthusiast https://www.linkedin.com/in/rushikesh-panchal
+
+                        
