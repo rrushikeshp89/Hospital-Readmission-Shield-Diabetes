@@ -33,8 +33,8 @@ age_group = st.sidebar.slider("Age Group (0=0-10, 9=90-100)", 0, 9, 7)
 
 # Medical History
 time_in_hospital = st.sidebar.number_input("Days in Hospital", 1, 14, 3)
-num_lab_procedures = st.sidebar.number_input("Num Lab Procedures", 0, 150, 40)
-num_medications = st.sidebar.number_input("Num Medications", 0, 100, 15)
+num_lab_procedures = st.sidebar.number_input("Number of Lab Procedures", 0, 150, 40)
+num_medications = st.sidebar.number_input("Number of Medications", 0, 100, 15)
 service_utilization = st.sidebar.number_input("Prior Visits (Emergency/Inpatient)", 0, 20, 1)
 
 # Diagnoses
@@ -43,8 +43,8 @@ primary_diagnosis = st.sidebar.selectbox("Primary Diagnosis Group",
      'Musculoskeletal', 'Genitourinary', 'Neoplasms', 'Other'])
 
 # Lab Results
-a1c_result = st.sidebar.selectbox("A1C Result", ["None", "Norm", ">7", ">8"])
-max_glu_serum = st.sidebar.selectbox("Max Glu Serum", ["None", "Norm", ">200", ">300"])
+a1c_result = st.sidebar.selectbox("HbA1C Result", ["None", "Norm", ">7", ">8"])
+max_glu_serum = st.sidebar.selectbox("Max Serum Glucose", ["None", "Norm", ">200", ">300"])
 
 # --- 4. PREDICTION LOGIC ---
 if st.sidebar.button("Predict Risk"):
